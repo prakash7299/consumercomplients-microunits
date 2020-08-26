@@ -1,4 +1,4 @@
-package com.dxctraining.inventorymgt.supplier.exceptions;
+package com.dxctraining.compliantmgt.compliant.exceptions;
 
 public class InvalidArgumentException extends RuntimeException{
 

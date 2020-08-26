@@ -13,18 +13,30 @@ public class Consumer {
 	@GeneratedValue
 	private int id;
 	private String name;
+	private int compliantId;
 
 	public Consumer() {
 
 	}
 
 
-	public Consumer(String name) {
+	public Consumer(String name,int compliantId ) {
 		this.name = name;
+		this.compliantId=compliantId;
 	}
 
 	
 	
+
+	public int getCompliantId() {
+		return compliantId;
+	}
+
+
+	public void setCompliantId(int compliantId) {
+		this.compliantId = compliantId;
+	}
+
 
 	public int getId() {
 		return id;

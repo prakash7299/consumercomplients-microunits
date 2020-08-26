@@ -1,4 +1,4 @@
-package com.dxctraining.inventorymgt.supplier.exceptions;
+package com.dxctraining.compliantmgt.compliant.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,9 +10,9 @@ import javax.validation.ConstraintViolationException;
 @RestControllerAdvice
 public class CentralizedExceptionHandler {
 
-    @ExceptionHandler(SupplierNotFoundException.class)
+    @ExceptionHandler(CompliantNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleSupplierNotFound(SupplierNotFoundException e){
+    public String handleSupplierNotFound(CompliantNotFoundException e){
         String msg=e.getMessage();
         return msg;
     }

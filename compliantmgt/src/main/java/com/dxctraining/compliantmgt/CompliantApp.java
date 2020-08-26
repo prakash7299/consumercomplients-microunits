@@ -1,4 +1,4 @@
-package com.dxctraining.inventorymgt;
+package com.dxctraining.compliantmgt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,12 +7,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-/**
- * @SpringBootapplication equivalent to 3 things 1)@Configuration : so we dont
- *                        have to provide on our own 2)@ComponentScan: so we
- *                        dont have to provide on our own 3) @AutoConfiguration
- *                        so we dont have to provide on our own
- */
 @SpringBootApplication
 public class CompliantApp {
 

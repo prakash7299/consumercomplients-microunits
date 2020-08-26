@@ -1,4 +1,4 @@
-package com.dxctraining.inventorymgt.supplier.entities;
+package com.dxctraining.compliantmgt.compliant.entities;
 
 import java.util.Set;
 
@@ -10,22 +10,20 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "suppliers_information")
-public class Supplier {
+@Table(name = "compliants")
+public class Compliant {
 	@Id
 	@GeneratedValue
 	private int id;
-	private String sname;
-	private String password;
+	private String description;
 
-	public Supplier() {
+	public Compliant() {
 
 	}
 
 
-	public Supplier(String sname, String password) {
-		this.sname = sname;
-		this.password = password;
+	public Compliant(String description) {
+		this.description = description;
 	}
 
 	
@@ -39,21 +37,17 @@ public class Supplier {
 		this.id = id;
 	}
 
-	public String getName() {
-		return sname;
+	
+
+	public String getDescription() {
+		return description;
 	}
 
-	public void setName(String sname) {
-		this.sname = sname;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	@Override
 	public int hashCode() {
@@ -67,7 +61,7 @@ public class Supplier {
 		if (o == null || getClass() != o.getClass()) {
 			return false;
 		}
-		Supplier that = (Supplier) o;
+		Compliant that = (Compliant) o;
 		return id == that.id;
 
 	}
