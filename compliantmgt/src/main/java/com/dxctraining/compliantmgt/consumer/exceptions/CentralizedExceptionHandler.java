@@ -12,7 +12,7 @@ public class CentralizedExceptionHandler {
 
     @ExceptionHandler(CompliantNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleSupplierNotFound(CompliantNotFoundException e){
+    public String handleCompliantNotFound(CompliantNotFoundException e){
         String msg=e.getMessage();
         return msg;
     }

@@ -11,5 +11,7 @@ public interface ICompliantService {
     Compliant add(Compliant compliant);
     
     Compliant update(Compliant compliant);
+    
+    List<Compliant> allCompliantsByConsumer(int consumerId);
 
 }

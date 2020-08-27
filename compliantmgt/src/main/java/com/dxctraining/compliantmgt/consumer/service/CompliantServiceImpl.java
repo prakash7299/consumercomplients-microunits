@@ -7,7 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.dxctraining.compliantmgt.consumer.dao.ICompliantDao;
 import com.dxctraining.compliantmgt.consumer.entities.Compliant;
 import com.dxctraining.compliantmgt.consumer.exceptions.InvalidArgumentException;
@@ -41,6 +40,12 @@ public class CompliantServiceImpl implements ICompliantService {
 		 compliant=dao.update(compliant);
 		 return compliant;
 	 }
+	 
+	 @Override
+	    public List<Compliant> allCompliantsByConsumer(int consumerId){
+	        List<Compliant>list=dao.allCompliantsByConsumer(consumerId);
+	        return list;
+	    }
 	 
 
 }

@@ -38,4 +38,13 @@ public class CompliantDaoImpl implements ICompliantDao {
 		 return compliant;
 	 }
 	 
+	 @Override
+	    public List<Compliant> allCompliantsByConsumer(int consumerId) {
+	        String jpaql="from Compliants where consumerId=:consumer";
+	        TypedQuery<Compliant>query=entityManager.createQuery(jpaql,Compliant.class);
+	        query.setParameter("consumer",consumerId);
+	        List<Compliant>compliantList=query.getResultList();
+	        return compliantList;
+	    }
+	 
 }
